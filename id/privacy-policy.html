@@ -33,7 +33,7 @@
 <body>
 
 <h1>Kebijakan Privasi</h1>
-<p class="date">Tanggal berlaku: 16 April 2026 | Pembaruan terakhir: 16 April 2026</p>
+<p class="date">Tanggal berlaku: 27 April 2026 | Pembaruan terakhir: 27 April 2026</p>
 
 <p>Anbu ("kami") berkomitmen untuk melindungi privasi Anda. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, menyimpan, dan melindungi informasi saat Anda menggunakan aplikasi seluler Anbu ("Layanan"). Dengan menggunakan Layanan, Anda menyetujui praktik yang dijelaskan dalam kebijakan ini.</p>
 
@@ -82,6 +82,11 @@
       <td>Verifikasi aktivitas (tidak dikumpulkan jika izin ditolak)</td>
     </tr>
     <tr>
+      <td>Data Lokasi (Opsional — Orang yang Dilindungi)</td>
+      <td>Garis lintang (latitude), garis bujur (longitude), akurasi (accuracy), waktu pengambilan (timestamp)</td>
+      <td>Hanya dikirim satu kali kepada Pelindung ketika Orang yang Dilindungi menekan sendiri tombol permintaan bantuan darurat [🚨 Saya butuh bantuan]. Tidak dikumpulkan selama pemeriksaan heartbeat berkala. Jika izin lokasi ditolak atau GPS gagal, notifikasi darurat tetap dikirim tanpa lokasi.</td>
+    </tr>
+    <tr>
       <td>Langganan (Pelindung)</td>
       <td>Bukti pembelian dalam aplikasi (Apple/Google)</td>
       <td>Verifikasi langganan dan akses layanan</td>
@@ -92,7 +97,7 @@
 <h3>1.3 Informasi yang TIDAK Kami Kumpulkan</h3>
 <ul>
   <li>Nama, nomor telepon, alamat email, atau informasi pengenal pribadi apa pun</li>
-  <li>Data lokasi (GPS, Wi-Fi, atau menara seluler)</li>
+  <li>Data lokasi selama pemeriksaan kesejahteraan berkala (heartbeat) — kami sama sekali tidak melakukan pelacakan lokasi di latar belakang. Lokasi hanya dikumpulkan satu kali ketika Orang yang Dilindungi menekan sendiri tombol permintaan bantuan darurat [🚨 Saya butuh bantuan] (lihat Bagian 1.2).</li>
   <li>Foto, kontak, atau data lain yang tersimpan di perangkat Anda</li>
   <li>Log panggilan, pesan teks, atau riwayat penjelajahan</li>
   <li>Data sensor berkelanjutan (kami hanya mengambil cuplikan singkat sekali sehari)</li>
@@ -103,6 +108,7 @@
 <ol>
   <li><strong>Layanan Pemeriksaan Kesejahteraan:</strong> Mengumpulkan sinyal heartbeat dari perangkat Orang yang Dilindungi dan memberi tahu Pelindung tentang status kesejahteraan.</li>
   <li><strong>Notifikasi Peringatan:</strong> Mengirim peringatan bertahap (Perhatian &rarr; Peringatan &rarr; Darurat) kepada Pelindung ketika heartbeat Orang yang Dilindungi tidak diterima.</li>
+  <li><strong>Pemrosesan Permintaan Bantuan Darurat:</strong> Ketika Orang yang Dilindungi menekan sendiri tombol bantuan darurat, sistem segera meneruskan notifikasi kepada seluruh Pelindung yang terhubung. Jika pengguna menyetujui untuk membagikan informasi lokasi, lokasi saat ini (garis lintang, garis bujur, akurasi) juga akan disertakan.</li>
   <li><strong>Pemantauan Status Perangkat:</strong> Menginformasikan Pelindung tentang baterai rendah, penutupan aplikasi, atau kondisi lain yang dapat memengaruhi pemeriksaan kesejahteraan.</li>
   <li><strong>Manajemen Langganan:</strong> Memverifikasi bukti pembelian dalam aplikasi dan mengelola akses layanan Pelindung.</li>
   <li><strong>Peningkatan Layanan:</strong> Mendiagnosis kesalahan dan meningkatkan keandalan layanan.</li>
@@ -130,6 +136,11 @@
       <td>Dihapus setiap tengah malam (zona waktu lokal Orang yang Dilindungi)</td>
     </tr>
     <tr>
+      <td>Informasi lokasi pada permintaan bantuan darurat</td>
+      <td>Maksimal 24 jam</td>
+      <td>Otomatis dihapus bersama dengan catatan notifikasi pada tengah malam berdasarkan zona waktu perangkat Orang yang Dilindungi</td>
+    </tr>
+    <tr>
       <td>Informasi langganan</td>
       <td>Sampai berakhirnya langganan atau penghapusan akun</td>
       <td>Dihapus segera saat akun dihapus</td>
@@ -141,6 +152,7 @@
 <p>Kami tidak menjual, memperdagangkan, atau menyewakan informasi Anda kepada pihak ketiga. Kami membagikan informasi hanya dalam keadaan terbatas berikut:</p>
 <ol>
   <li><strong>Koneksi Pelindung-Orang yang Dilindungi:</strong> Ketika Orang yang Dilindungi membagikan Kode Undangan mereka kepada Pelindung, Pelindung menerima status kesejahteraan Orang yang Dilindungi (heartbeat diterima/tidak diterima, level baterai). Tidak ada informasi pribadi yang dibagikan &mdash; hanya data kesejahteraan tingkat perangkat.</li>
+  <li><strong>Pengiriman lokasi saat permintaan bantuan darurat:</strong> Hanya ketika Orang yang Dilindungi menekan sendiri tombol [🚨 Saya butuh bantuan] di dalam aplikasi dan menyetujui pembagian informasi lokasi, lokasi saat ini (garis lintang, garis bujur, akurasi) akan dikirimkan satu kali kepada seluruh Pelindung yang terhubung. Jika izin lokasi ditolak atau perangkat tidak menerima sinyal GPS, hanya notifikasi darurat yang dikirim tanpa lokasi.</li>
   <li><strong>Persyaratan Hukum:</strong> Ketika diwajibkan oleh hukum, peraturan, atau proses hukum yang berlaku.</li>
 </ol>
 

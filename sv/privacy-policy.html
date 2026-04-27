@@ -33,7 +33,7 @@
 <body>
 
 <h1>Integritetspolicy</h1>
-<p class="date">Ikrafttr&auml;dande: 16 april 2026 | Senast uppdaterad: 16 april 2026</p>
+<p class="date">Ikrafttr&auml;dande: 27 april 2026 | Senast uppdaterad: 27 april 2026</p>
 
 <p>Anbu ("vi", "oss" eller "v&aring;r") &auml;r engagerade i att skydda din integritet. Denna integritetspolicy f&ouml;rklarar hur vi samlar in, anv&auml;nder, lagrar och skyddar information n&auml;r du anv&auml;nder mobilapplikationen Anbu ("Tj&auml;nsten"). Genom att anv&auml;nda Tj&auml;nsten godk&auml;nner du de rutiner som beskrivs i denna policy.</p>
 
@@ -82,6 +82,11 @@
       <td>Aktivitetsverifiering (samlas inte in om tillst&aring;nd nekas)</td>
     </tr>
     <tr>
+      <td>Platsdata (Skyddad person, frivilligt)</td>
+      <td>Latitud, longitud, noggrannhet och tidsst&auml;mpel f&ouml;r registreringen</td>
+      <td>Delas endast en g&aring;ng med anslutna v&aring;rdgivare n&auml;r den skyddade personen sj&auml;lv trycker p&aring; knappen [🚨 Jag beh&ouml;ver hj&auml;lp]. Ingen platsdata samlas in vid den ordinarie h&auml;lsokontrollen (heartbeat). Om platsbeh&ouml;righeten nekas eller om GPS-position inte kan fastst&auml;llas skickas n&ouml;daviseringen utan platsdata.</td>
+    </tr>
+    <tr>
       <td>Prenumeration (V&aring;rdgivare)</td>
       <td>Kvitto f&ouml;r k&ouml;p i appen (Apple/Google)</td>
       <td>Prenumerationsverifiering och &aring;tkomst till tj&auml;nsten</td>
@@ -92,10 +97,16 @@
 <h3>1.3 Information vi INTE samlar in</h3>
 <ul>
   <li>Namn, telefonnummer, e-postadress eller n&aring;gon annan personligt identifierbar information</li>
-  <li>Platsdata (GPS, Wi-Fi eller mobilmaster)</li>
+  <li>Platsdata vid den ordinarie h&auml;lsokontrollen (heartbeat); vi utf&ouml;r aldrig n&aring;gon platssp&aring;rning i bakgrunden</li>
   <li>Foton, kontakter eller andra data lagrade p&aring; din enhet</li>
   <li>Samtalsloggar, textmeddelanden eller webbhistorik</li>
   <li>Kontinuerliga sensordata (vi tar bara korta &ouml;gonblicksbilder en g&aring;ng per dag)</li>
+</ul>
+
+<h3>1.4 Insamlingss&auml;tt</h3>
+<ul>
+  <li>Enhets- och h&auml;lsodata skickas automatiskt till v&aring;ra servrar vid varje heartbeat-&ouml;verf&ouml;ring.</li>
+  <li>Platsdata samlas in en enda g&aring;ng i f&ouml;rgrunden, och endast n&auml;r den skyddade personen sj&auml;lv trycker p&aring; knappen f&ouml;r n&ouml;dhj&auml;lp och platsbeh&ouml;righet har beviljats. Platsdata samlas aldrig in i bakgrunden.</li>
 </ul>
 
 <h2>2. Hur vi anv&auml;nder din information</h2>
@@ -103,6 +114,7 @@
 <ol>
   <li><strong>H&auml;lsokontrolltj&auml;nst:</strong> Insamling av heartbeat-signaler fr&aring;n den skyddade personens enhet och avisering av v&aring;rdgivare om h&auml;lsostatus.</li>
   <li><strong>Varningsaviseringar:</strong> Utskick av stegvisa varningar (Observera &rarr; Varning &rarr; Akut) till v&aring;rdgivare n&auml;r en skyddad persons heartbeat inte mottas.</li>
+  <li><strong>Hantering av n&ouml;dhj&auml;lpsbeg&auml;ran:</strong> N&auml;r en skyddad person sj&auml;lv trycker p&aring; knappen [🚨 Jag beh&ouml;ver hj&auml;lp] vidarebefordrar vi aviseringen omedelbart till samtliga anslutna v&aring;rdgivare. Om anv&auml;ndaren har samtyckt till att dela platsdata skickas dessutom den aktuella positionen (latitud, longitud och noggrannhet).</li>
   <li><strong>Enhetsstatusbevakning:</strong> Informera v&aring;rdgivare om l&aring;gt batteri, appavslutning eller andra f&ouml;rh&aring;llanden som kan p&aring;verka h&auml;lsokontroller.</li>
   <li><strong>Prenumerationshantering:</strong> Verifiering av kvitton f&ouml;r k&ouml;p i appen och hantering av v&aring;rdgivares tj&auml;nst&aring;tkomst.</li>
   <li><strong>Tj&auml;nstef&ouml;rb&auml;ttring:</strong> Fels&ouml;kning och f&ouml;rb&auml;ttring av tj&auml;nstens tillf&ouml;rlitlighet.</li>
@@ -130,6 +142,11 @@
       <td>Raderas dagligen vid midnatt (skyddad persons lokala tidszon)</td>
     </tr>
     <tr>
+      <td>Platsdata fr&aring;n n&ouml;dhj&auml;lpsbeg&auml;ran</td>
+      <td>Upp till 24 timmar</td>
+      <td>Raderas automatiskt tillsammans med tillh&ouml;rande aviseringsposter vid midnatt enligt den lokala tidszonen f&ouml;r den skyddade personens enhet</td>
+    </tr>
+    <tr>
       <td>Prenumerationsinformation</td>
       <td>Tills prenumerationen l&ouml;per ut eller kontot raderas</td>
       <td>Raderas omedelbart vid kontoradering</td>
@@ -141,6 +158,7 @@
 <p>Vi s&auml;ljer, byter eller hyr inte ut din information till tredje part. Vi delar information endast under f&ouml;ljande begr&auml;nsade omst&auml;ndigheter:</p>
 <ol>
   <li><strong>Koppling mellan v&aring;rdgivare och skyddad person:</strong> N&auml;r en skyddad person delar sin inbjudningskod med en v&aring;rdgivare f&aring;r v&aring;rdgivaren den skyddade personens h&auml;lsostatus (heartbeat mottaget/uteblivet, batteriniv&aring;). Inga personuppgifter delas &mdash; bara h&auml;lsodata p&aring; enhetsniv&aring;.</li>
+  <li><strong>Delning av plats vid n&ouml;dhj&auml;lpsbeg&auml;ran:</strong> N&auml;r den skyddade personen sj&auml;lv trycker p&aring; knappen [🚨 Jag beh&ouml;ver hj&auml;lp] i appen och har samtyckt till att dela platsdata, delas den aktuella positionen (latitud, longitud och noggrannhet) en g&aring;ng med samtliga anslutna v&aring;rdgivare. Om platsbeh&ouml;righeten nekas eller om GPS-position inte kan fastst&auml;llas skickas n&ouml;daviseringen utan platsdata.</li>
   <li><strong>R&auml;ttsliga krav:</strong> N&auml;r det kr&auml;vs enligt till&auml;mplig lag, f&ouml;rordning eller giltigt r&auml;ttsligt f&ouml;rfarande.</li>
 </ol>
 

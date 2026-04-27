@@ -33,7 +33,7 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="date">Effective Date: April 16, 2026 | Last Updated: April 16, 2026</p>
+<p class="date">Effective Date: April 27, 2026 | Last Updated: April 27, 2026</p>
 
 <p>Anbu ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect information when you use the Anbu mobile application (the "Service"). By using the Service, you agree to the practices described in this policy.</p>
 
@@ -82,6 +82,11 @@
       <td>Activity verification (not collected if permission is denied)</td>
     </tr>
     <tr>
+      <td>Location Data (Subject, Optional)</td>
+      <td>Latitude, longitude, accuracy radius, and timestamp</td>
+      <td>Provided one time to connected guardians only when the subject directly taps the [🚨] emergency help button. Not collected during routine wellness checks. If location permission is denied or GPS is unavailable, the emergency notification is still delivered without location data.</td>
+    </tr>
+    <tr>
       <td>Subscription (Guardian)</td>
       <td>In-app purchase receipt (Apple/Google)</td>
       <td>Subscription verification and service access</td>
@@ -92,7 +97,7 @@
 <h3>1.3 Information We Do NOT Collect</h3>
 <ul>
   <li>Name, phone number, email address, or any personally identifiable information</li>
-  <li>Location data (GPS, Wi-Fi, or cell tower)</li>
+  <li>Location data during routine wellness checks (heartbeat) — we never perform background location tracking</li>
   <li>Photos, contacts, or other data stored on your device</li>
   <li>Call logs, text messages, or browsing history</li>
   <li>Continuous sensor data (we only take brief snapshots once per day)</li>
@@ -103,6 +108,7 @@
 <ol>
   <li><strong>Wellness Check Service:</strong> Collecting heartbeat signals from the subject's device and notifying guardians of wellness status.</li>
   <li><strong>Alert Notifications:</strong> Sending step-by-step alerts (Caution → Warning → Urgent) to guardians when a subject's heartbeat is not received.</li>
+  <li><strong>Emergency Help Request Handling:</strong> When the subject directly taps the emergency help button, an immediate notification is sent to all connected guardians. If the user consents to location sharing, the current location (latitude, longitude, and accuracy) is included with the alert.</li>
   <li><strong>Device Status Monitoring:</strong> Informing guardians of low battery, app termination, or other conditions that may affect wellness checks.</li>
   <li><strong>Subscription Management:</strong> Verifying in-app purchase receipts and managing guardian service access.</li>
   <li><strong>Service Improvement:</strong> Diagnosing errors and improving service reliability.</li>
@@ -130,6 +136,11 @@
       <td>Deleted daily at midnight (subject's local timezone)</td>
     </tr>
     <tr>
+      <td>Emergency help request location data</td>
+      <td>Up to 24 hours</td>
+      <td>Automatically deleted along with notification records at midnight in the subject's device timezone</td>
+    </tr>
+    <tr>
       <td>Subscription information</td>
       <td>Until subscription expiry or account deletion</td>
       <td>Deleted immediately upon account deletion</td>
@@ -141,6 +152,7 @@
 <p>We do not sell, trade, or rent your information to third parties. We share information only in the following limited circumstances:</p>
 <ol>
   <li><strong>Guardian-Subject Connection:</strong> When a subject shares their invite code with a guardian, the guardian receives the subject's wellness status (heartbeat received/missed, battery level). No personal information is shared — only device-level wellness data.</li>
+  <li><strong>Location Sharing During Emergency Help Requests:</strong> When the subject directly taps the [🚨] emergency help button in the app and consents to location sharing, the current location (latitude, longitude, and accuracy) is provided one time to all connected guardians. If location permission is denied or a GPS signal is unavailable, only the emergency alert is delivered without any location data.</li>
   <li><strong>Legal Requirements:</strong> When required by applicable law, regulation, or valid legal process.</li>
 </ol>
 

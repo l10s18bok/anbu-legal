@@ -33,7 +33,7 @@
 <body>
 
 <h1>Privacybeleid</h1>
-<p class="date">Ingangsdatum: 16 april 2026 | Laatst bijgewerkt: 16 april 2026</p>
+<p class="date">Ingangsdatum: 27 april 2026 | Laatst bijgewerkt: 27 april 2026</p>
 
 <p>Anbu ("wij", "ons" of "onze") hecht groot belang aan de bescherming van uw privacy. Dit Privacybeleid legt uit hoe wij gegevens verzamelen, gebruiken, opslaan en beschermen wanneer u de mobiele applicatie Anbu (de "Dienst") gebruikt. Door de Dienst te gebruiken, stemt u in met de praktijken zoals beschreven in dit beleid.</p>
 
@@ -82,6 +82,11 @@
       <td>Activiteitsverificatie (wordt niet verzameld als toestemming wordt geweigerd)</td>
     </tr>
     <tr>
+      <td>Locatiegegevens (Beschermde persoon, optioneel)</td>
+      <td>Breedtegraad, lengtegraad, nauwkeurigheid, tijdstip van vastlegging</td>
+      <td>Wordt uitsluitend eenmalig gedeeld met de verbonden beschermers wanneer de beschermde persoon de knop [🚨 Ik heb hulp nodig] zelf indrukt. Tijdens de reguliere welzijnscontrole (heartbeat) worden geen locatiegegevens verzameld. Wanneer de locatiemachtiging wordt geweigerd of er geen GPS-fix beschikbaar is, wordt de noodmelding zonder locatie verzonden.</td>
+    </tr>
+    <tr>
       <td>Abonnement (Beschermer)</td>
       <td>In-app aankoop-ontvangstbewijs (Apple/Google)</td>
       <td>Abonnementsverificatie en toegang tot de Dienst</td>
@@ -92,10 +97,16 @@
 <h3>1.3 Gegevens die wij NIET verzamelen</h3>
 <ul>
   <li>Naam, telefoonnummer, e-mailadres of andere persoonlijk identificeerbare informatie</li>
-  <li>Locatiegegevens (GPS, Wi-Fi of zendmast)</li>
+  <li>Locatiegegevens tijdens de reguliere welzijnscontrole (heartbeat); wij voeren op geen enkel moment locatietracking op de achtergrond uit</li>
   <li>Foto's, contacten of andere gegevens die op uw apparaat zijn opgeslagen</li>
   <li>Oproeplogboeken, sms-berichten of browsegeschiedenis</li>
   <li>Continue sensorgegevens (wij nemen slechts eenmaal per dag korte momentopnamen)</li>
+</ul>
+
+<h3>1.4 Manier van verzamelen</h3>
+<ul>
+  <li>Apparaat- en welzijnsgegevens worden automatisch naar onze servers verzonden bij elke heartbeat-overdracht.</li>
+  <li>Locatiegegevens worden uitsluitend eenmalig op de voorgrond vastgelegd wanneer de beschermde persoon de knop voor noodhulp zelf indrukt en de locatiemachtiging is verleend. Op geen enkel moment worden locatiegegevens op de achtergrond verzameld.</li>
 </ul>
 
 <h2>2. Hoe wij uw gegevens gebruiken</h2>
@@ -103,6 +114,7 @@
 <ol>
   <li><strong>Welzijnscontrole:</strong> Het verzamelen van heartbeat-signalen van het apparaat van de beschermde persoon en het informeren van beschermers over de welzijnsstatus.</li>
   <li><strong>Waarschuwingsmeldingen:</strong> Het verzenden van stapsgewijze waarschuwingen (Let op → Waarschuwing → Urgent) aan beschermers wanneer er geen heartbeat van een beschermde persoon wordt ontvangen.</li>
+  <li><strong>Verwerking van noodhulpverzoeken:</strong> Wanneer een beschermde persoon de knop [🚨 Ik heb hulp nodig] zelf indrukt, sturen wij de melding onmiddellijk naar alle verbonden beschermers. Heeft de gebruiker toestemming gegeven voor het delen van locatiegegevens, dan worden tevens de huidige locatie (breedtegraad, lengtegraad en nauwkeurigheid) doorgegeven.</li>
   <li><strong>Apparaatstatuscontrole:</strong> Het informeren van beschermers over een lage batterij, het afsluiten van de app of andere omstandigheden die welzijnscontroles kunnen beinvloeden.</li>
   <li><strong>Abonnementsbeheer:</strong> Het verifieren van in-app aankoop-ontvangstbewijzen en het beheren van de toegang van beschermers tot de Dienst.</li>
   <li><strong>Verbetering van de Dienst:</strong> Het diagnosticeren van fouten en het verbeteren van de betrouwbaarheid van de Dienst.</li>
@@ -130,6 +142,11 @@
       <td>Dagelijks om middernacht verwijderd (lokale tijdzone van de beschermde persoon)</td>
     </tr>
     <tr>
+      <td>Locatiegegevens uit noodhulpverzoeken</td>
+      <td>Maximaal 24 uur</td>
+      <td>Worden samen met de bijbehorende meldingen automatisch verwijderd om middernacht volgens de lokale tijdzone van het apparaat van de beschermde persoon</td>
+    </tr>
+    <tr>
       <td>Abonnementsgegevens</td>
       <td>Tot het verstrijken van het abonnement of verwijdering van het account</td>
       <td>Wordt onmiddellijk verwijderd bij verwijdering van het account</td>
@@ -141,6 +158,7 @@
 <p>Wij verkopen, verhandelen of verhuren uw gegevens niet aan derden. Wij delen gegevens uitsluitend in de volgende beperkte omstandigheden:</p>
 <ol>
   <li><strong>Verbinding tussen beschermer en beschermde persoon:</strong> Wanneer een beschermde persoon zijn of haar uitnodigingscode deelt met een beschermer, ontvangt de beschermer de welzijnsstatus van de beschermde persoon (heartbeat ontvangen/gemist, batterijniveau). Er wordt geen persoonlijke informatie gedeeld — uitsluitend welzijnsgegevens op apparaatniveau.</li>
+  <li><strong>Locatiedeling bij noodhulpverzoeken:</strong> Wanneer de beschermde persoon de knop [🚨 Ik heb hulp nodig] in de app zelf indrukt en toestemming heeft gegeven voor het delen van locatiegegevens, wordt de huidige locatie (breedtegraad, lengtegraad en nauwkeurigheid) eenmalig gedeeld met alle verbonden beschermers. Wanneer de locatiemachtiging wordt geweigerd of er geen GPS-fix beschikbaar is, wordt de noodmelding zonder locatiegegevens verzonden.</li>
   <li><strong>Wettelijke vereisten:</strong> Wanneer dit vereist is op grond van toepasselijk recht, regelgeving of een geldige juridische procedure.</li>
 </ol>
 

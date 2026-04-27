@@ -33,7 +33,7 @@
 <body>
 
 <h1>Gizlilik Politikasi</h1>
-<p class="date">Yururluk tarihi: 16 Nisan 2026 | Son guncelleme: 16 Nisan 2026</p>
+<p class="date">Yururluk tarihi: 27 Nisan 2026 | Son guncelleme: 27 Nisan 2026</p>
 
 <p>Anbu ("biz" veya "bizim") gizliliginizi korumaya kararliyiz. Bu Gizlilik Politikasi, Anbu mobil uygulamasini ("Hizmet") kullandiginizda bilgilerinizi nasil topladigimizi, kullandigimizi, sakladigimizi ve korudugumuzu aciklar. Hizmeti kullanarak bu politikada aciklanan uygulamalari kabul etmis olursunuz.</p>
 
@@ -82,6 +82,11 @@
       <td>Aktivite dogrulamasi (izin reddedilirse toplanmaz)</td>
     </tr>
     <tr>
+      <td>Opsiyonel (Korunan Kisi)</td>
+      <td>Konum verileri (enlem, boylam, dogruluk, yakalama zamani)</td>
+      <td>Yalnizca korunan kisi [🚨 Yardima ihtiyacim var] acil yardim talebi dugmesine kendisi bastiginda koruyuculara tek seferlik iletilir. Olagan saglik kontrollerinde toplanmaz. Konum izninin reddedilmesi veya GPS sinyalinin alinamamasi durumunda acil uyari konum bilgisi olmadan gonderilir.</td>
+    </tr>
+    <tr>
       <td>Abonelik (Koruyucu)</td>
       <td>Uygulama ici satin alma makbuzu (Apple/Google)</td>
       <td>Abonelik dogrulamasi ve hizmet erisimi</td>
@@ -92,10 +97,17 @@
 <h3>1.3 Toplamadigimiz Bilgiler</h3>
 <ul>
   <li>Ad, telefon numarasi, e-posta adresi veya kisisel olarak tanimlanabilir herhangi bir bilgi</li>
-  <li>Konum verileri (GPS, Wi-Fi veya baz istasyonu)</li>
+  <li>Olagan saglik kontrollerinde (heartbeat) konum verisi — arka planda hicbir konum takibi yapmiyoruz</li>
   <li>Cihazinizda kayitli fotograflar, kisiler veya diger veriler</li>
   <li>Arama kayitlari, kisa mesajlar veya tarama gecmisi</li>
   <li>Surekli sensor verileri (gunde yalnizca bir kez kisa anlik goruntuler aliriz)</li>
+</ul>
+
+<p><strong>Veri toplama yontemleri:</strong></p>
+<ul>
+  <li>Uygulamanin yuklenmesinin ardindan otomatik kayit (cihaz bilgileri, FCM jetonu)</li>
+  <li>Gunluk saglik kontrolu sirasinda alinan sensor anlik goruntuleri ve adim sayisi (steps_delta, pil seviyesi)</li>
+  <li>Konum yalnizca korunan kisi acil yardim talebi dugmesine kendisi bastiginda ve konum izni verilmis ise tek seferlik toplanir (yalnizca on planda; arka planda konum toplanmaz)</li>
 </ul>
 
 <h2>2. Bilgilerinizi Nasil Kullaniriz</h2>
@@ -103,6 +115,7 @@
 <ol>
   <li><strong>Saglik Kontrolu Hizmeti:</strong> Korunan kisinin cihazindan heartbeat sinyallerini toplayarak koruyuculara saglik durumunu bildirmek.</li>
   <li><strong>Uyari Bildirimleri:</strong> Korunan kisinin heartbeat'i alinmadiginda koruyuculara kademeli uyarilar (Dikkat &rarr; Uyari &rarr; Acil) gondermek.</li>
+  <li><strong>Acil Yardim Taleplerinin Islenmesi:</strong> Korunan kisi acil yardim dugmesine kendisi bastiginda baglantili tum koruyuculari derhal bilgilendiririz. Kullanici konum bilgisinin paylasilmasina onay verdiyse, mevcut konum (enlem, boylam, dogruluk) bildirimle birlikte iletilir.</li>
   <li><strong>Cihaz Durumu Izleme:</strong> Dusuk pil, uygulamanin kapatilmasi veya saglik kontrollerini etkileyebilecek diger durumlar hakkinda koruyuculari bilgilendirmek.</li>
   <li><strong>Abonelik Yonetimi:</strong> Uygulama ici satin alma makbuzlarini dogrulamak ve koruyucu hizmet erisimini yonetmek.</li>
   <li><strong>Hizmet Iyilestirme:</strong> Hatalari teshis etmek ve hizmet guvenilirligini artirmak.</li>
@@ -130,6 +143,11 @@
       <td>Her gun gece yarisinda silinir (korunan kisinin yerel saat dilimine gore)</td>
     </tr>
     <tr>
+      <td>Acil yardim talebi konum verileri</td>
+      <td>24 saate kadar</td>
+      <td>Korunan kisinin cihaz saat dilimine gore gece yarisinda bildirim kayitlariyla birlikte otomatik olarak silinir</td>
+    </tr>
+    <tr>
       <td>Abonelik bilgileri</td>
       <td>Abonelik sona erene veya hesap silinene kadar</td>
       <td>Hesap silindiginde derhal silinir</td>
@@ -141,6 +159,7 @@
 <p>Bilgilerinizi ucuncu taraflara satmayiz, takas etmeyiz veya kiralamayiz. Bilgileri yalnizca asagidaki sinirli durumlarda paylasiyoruz:</p>
 <ol>
   <li><strong>Koruyucu-Korunan Kisi Baglantisi:</strong> Korunan kisi davet kodunu bir koruyucuyla paylasitiginda, koruyucu korunan kisinin saglik durumunu (heartbeat alinip alinmadigi, pil seviyesi) alir. Kisisel bilgi paylasilmaz; yalnizca cihaz duzeyinde saglik verileri paylasilir.</li>
+  <li><strong>Acil yardim talebinde konum paylasimi:</strong> Korunan kisi uygulama icindeki [🚨 Yardima ihtiyacim var] acil yardim talebi dugmesine kendisi bastiginda ve konum bilgisinin paylasilmasina onay verdiginde, mevcut konumu (enlem, boylam, dogruluk) baglantili tum koruyuculara tek seferlik iletilir. Konum izninin reddedilmesi veya GPS sinyalinin alinamamasi durumunda acil bildirim konum bilgisi olmadan gonderilir.</li>
   <li><strong>Yasal Gereklilikler:</strong> Yururlukteki yasa, yonetmelik veya gecerli yasal surec gerektirdiginde.</li>
 </ol>
 

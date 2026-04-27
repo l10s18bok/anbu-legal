@@ -33,7 +33,7 @@
 <body>
 
 <h1>Politica de Privacidade</h1>
-<p class="date">Data de vigencia: 16 de abril de 2026 | Ultima atualizacao: 16 de abril de 2026</p>
+<p class="date">Data de vigencia: 27 de abril de 2026 | Ultima atualizacao: 27 de abril de 2026</p>
 
 <p>O Anbu ("nos", "nosso" ou "nossa") tem o compromisso de proteger sua privacidade. Esta Politica de Privacidade explica como coletamos, usamos, armazenamos e protegemos informacoes quando voce utiliza o aplicativo movel Anbu (o "Servico"). Ao utilizar o Servico, voce concorda com as praticas descritas nesta politica.</p>
 
@@ -82,6 +82,11 @@
       <td>Verificacao de atividade (nao coletado se a permissao for negada)</td>
     </tr>
     <tr>
+      <td>Dados de Localizacao (Pessoa Protegida &mdash; opcional)</td>
+      <td>Latitude, longitude, precisao e horario da captura</td>
+      <td>Transmissao unica ao(s) protetor(es) quando a pessoa protegida pressiona o proprio botao [&#128680; Preciso de ajuda]. Nao ha coleta durante as verificacoes periodicas de bem-estar. Se a permissao de localizacao for negada ou o GPS falhar, o alerta de emergencia e enviado sem informacoes de localizacao.</td>
+    </tr>
+    <tr>
       <td>Assinatura (Protetor)</td>
       <td>Comprovante de compra no aplicativo (Apple/Google)</td>
       <td>Verificacao de assinatura e acesso ao servico</td>
@@ -92,7 +97,7 @@
 <h3>1.3 Informacoes que NAO Coletamos</h3>
 <ul>
   <li>Nome, numero de telefone, endereco de e-mail ou qualquer informacao de identificacao pessoal</li>
-  <li>Dados de localizacao (GPS, Wi-Fi ou torres de celular)</li>
+  <li>Dados de localizacao durante as verificacoes periodicas de bem-estar (heartbeat) &mdash; nao realizamos qualquer rastreamento de localizacao em segundo plano</li>
   <li>Fotos, contatos ou outros dados armazenados em seu dispositivo</li>
   <li>Registros de chamadas, mensagens de texto ou historico de navegacao</li>
   <li>Dados continuos de sensores (realizamos apenas capturas breves uma vez por dia)</li>
@@ -103,6 +108,7 @@
 <ol>
   <li><strong>Servico de Verificacao de Bem-estar:</strong> Coletar sinais de heartbeat do dispositivo da pessoa protegida e notificar os protetores sobre o estado de bem-estar.</li>
   <li><strong>Notificacoes de Alerta:</strong> Enviar alertas progressivos (Atencao → Aviso → Urgente) aos protetores quando o heartbeat da pessoa protegida nao for recebido.</li>
+  <li><strong>Atendimento a Pedidos de Ajuda de Emergencia:</strong> Quando a pessoa protegida pressiona o proprio botao de emergencia, uma notificacao e enviada imediatamente a todos os protetores conectados. Caso o usuario tenha consentido com o compartilhamento de localizacao, a posicao atual (latitude, longitude e precisao) e anexada a essa notificacao.</li>
   <li><strong>Monitoramento do Estado do Dispositivo:</strong> Informar os protetores sobre bateria baixa, encerramento do aplicativo ou outras condicoes que possam afetar as verificacoes de bem-estar.</li>
   <li><strong>Gestao de Assinaturas:</strong> Verificar comprovantes de compras no aplicativo e gerenciar o acesso ao servico do protetor.</li>
   <li><strong>Melhoria do Servico:</strong> Diagnosticar erros e melhorar a confiabilidade do servico.</li>
@@ -130,6 +136,11 @@
       <td>Excluidos diariamente a meia-noite (fuso horario local da pessoa protegida)</td>
     </tr>
     <tr>
+      <td>Localizacao anexada a um pedido de ajuda de emergencia</td>
+      <td>Ate 24 horas</td>
+      <td>Excluida automaticamente a meia-noite (fuso horario local da pessoa protegida), juntamente com os registros de notificacoes</td>
+    </tr>
+    <tr>
       <td>Informacoes de assinatura</td>
       <td>Ate o vencimento da assinatura ou exclusao da conta</td>
       <td>Excluidas imediatamente apos a exclusao da conta</td>
@@ -141,6 +152,7 @@
 <p>Nao vendemos, negociamos ou alugamos suas informacoes a terceiros. Compartilhamos informacoes apenas nas seguintes circunstancias limitadas:</p>
 <ol>
   <li><strong>Conexao Protetor-Pessoa Protegida:</strong> Quando uma pessoa protegida compartilha seu codigo de convite com um protetor, o protetor recebe o estado de bem-estar da pessoa protegida (heartbeat recebido/nao recebido, nivel de bateria). Nenhuma informacao pessoal e compartilhada — apenas dados de bem-estar em nivel de dispositivo.</li>
+  <li><strong>Compartilhamento de Localizacao em Pedido de Ajuda de Emergencia:</strong> Quando a pessoa protegida pressiona o proprio botao [&#128680; Preciso de ajuda] no aplicativo e consente com o compartilhamento de localizacao, sua posicao atual (latitude, longitude e precisao) e transmitida uma unica vez a todos os protetores conectados. Caso a permissao de localizacao seja negada ou nao seja possivel obter o sinal de GPS, o alerta de emergencia ainda assim e enviado, porem sem informacoes de localizacao.</li>
   <li><strong>Requisitos Legais:</strong> Quando exigido por lei aplicavel, regulamentacao ou processo legal valido.</li>
 </ol>
 
